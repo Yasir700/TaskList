@@ -1,7 +1,7 @@
 let createInputPanel = () => {
 
     let inputPanel = document.createElement("div")
-    inputPanel.className = "inputPanel"
+    inputPanel.className = "input-panel"
 
     let nameInputLabel = createNameInputLabel()
     let nameInput = createNameInput()
@@ -22,7 +22,7 @@ let createInputPanel = () => {
     function createNameInput() {
         let nameInput = document.createElement("input")
         nameInput.setAttribute("type", "text")
-        nameInput.id = "nameInput"
+        nameInput.id = "name-input"
         inputPanel.append(nameInput)
         return nameInput
     }
@@ -36,9 +36,9 @@ let createInputPanel = () => {
     }
 
     function createDescInput() {
-        let descInput = document.createElement("input")
+        let descInput = document.createElement("textarea")
         descInput.setAttribute("type", "text")
-        descInput.id = "descInput"
+        descInput.id = "desc-input"
         inputPanel.append(descInput)
         return descInput
     }
@@ -46,10 +46,10 @@ let createInputPanel = () => {
     function createSaveBtn() {
         let saveBtn = document.createElement("button")
         saveBtn.textContent = "Save task"
+        saveBtn.className = "save-btn"
         inputPanel.append(saveBtn)
         return saveBtn
     }
-
 }
 
 
