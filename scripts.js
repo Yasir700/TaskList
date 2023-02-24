@@ -52,5 +52,11 @@ let createInputPanel = () => {
     }
 }
 
+let createShowPanel = () => {
+    let showPanel = document.createElement("div")
+    showPanel.className = "show-panel"
+    document.body.append(showPanel)
+}
 
+createShowPanel();
 createInputPanel();
