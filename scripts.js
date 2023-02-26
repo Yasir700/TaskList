@@ -1,6 +1,6 @@
 let createInputPanel = () => {
 
-    let inputPanel = document.createElement("div")
+    var inputPanel = document.createElement("div")
     inputPanel.className = "input-panel"
 
     let nameInputLabel = createNameInputLabel()
@@ -53,10 +53,38 @@ let createInputPanel = () => {
 }
 
 let createShowPanel = () => {
-    let showPanel = document.createElement("div")
+    showPanel = document.createElement("div")
     showPanel.className = "show-panel"
     document.body.append(showPanel)
 }
+
+let createTaskElement = (id, name, desc) => {
+
+    if (taskElements.length >= 8) {
+        console.log("You can't add any more task.")
+        return
+    }
+
+    let taskElement = document.createElement("div")
+    taskElement.className = "task-element-" + id + " task-element"
+    showPanel.append(taskElement)
+
+    let nameDiv = document.createElement("div")
+    nameDiv.className = "task-name-" + id + " task-name"
+    nameDiv.textContent = name
+    taskElement.append(nameDiv)
+
+    let descDiv = document.createElement("div")
+    descDiv.className = "task-desc-" + id + " task-desc"
+    descDiv.textContent = desc
+    taskElement.append(descDiv)
+
+    taskElements.push(taskElement)
+}
+
+let showPanel
+let inputPanel
+let taskElements = []
 
 createShowPanel();
 createInputPanel();
