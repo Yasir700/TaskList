@@ -101,6 +101,7 @@ let createTaskElement = (id, name, desc) => {
     taskElement.append(buttonDiv)
 
     let doneBtn = document.createElement("button")
+    doneBtn.classList.add("done-button")
     doneBtn.addEventListener("click", () => {
         if (taskElement.classList.contains("task-done")) {
             doneBtn.textContent = "done"
@@ -118,7 +119,9 @@ let createTaskElement = (id, name, desc) => {
     buttonDiv.append(doneBtn)
 
     let removeBtn = document.createElement("button")
+    removeBtn.classList.add("remove-button")
     removeBtn.addEventListener("click", () => {
+        taskElements.splice(taskElements.indexOf(taskElement), 1)
         taskElement.remove()
     })
     removeBtn.textContent = "remove"

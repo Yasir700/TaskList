@@ -69,7 +69,7 @@ body {
 }
 
 .show-panel {
-    border: 5px solid darkolivegreen;
+    border: 5px solid blue;
     border-radius: 50px;
 
     width: 800px;
@@ -90,7 +90,7 @@ body {
 }
 
 .task-name {
-    border: 3px solid purple;
+    border: 3px solid grey;
     border-radius: 50px;
     padding: 10px;
 
@@ -109,7 +109,7 @@ body {
 }
 
 .task-desc {
-    border: 3px solid purple;
+    border: 3px solid grey;
     border-radius: 50px;
     padding: 10px;
 
@@ -127,7 +127,7 @@ body {
 }
 
 .task-buttons {
-    border: 3px solid purple;
+    border: 3px solid grey;
     border-radius: 50px;
     padding: 10px;
 
@@ -137,7 +137,47 @@ body {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
+
+.done-button {
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: rgb(235, 235, 235);
+}
+
+.done-button:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.done-button:active {
+    background-color: rgb(163, 163, 163);
+}
+
+.remove-button {
+    color: white;
+}
+
+.remove-button:disabled {
+    border: 1px solid white;
+    background-color: rgb(255, 201, 201);
+    border-radius: 50px;
+}
+
+.remove-button:enabled {
+    background-color: rgb(255, 97, 97);
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.remove-button:enabled:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.remove-button:enabled:active {
+    border-color: red;
+}
+
 
 .warning-field {
     color: red;
